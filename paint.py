@@ -44,12 +44,32 @@ def circle(start, end):
 def rectangle(start, end):
     """Draw rectangle from start to end."""
     pass  # TODO
+    up()
+    goto(start.x, start.y)  
+    down()                 #De la linea 31 a 33 hace que la tortuga vaya a la posición que le indiquemos
+    begin_fill()           #Inicia el dibujo   
 
+    for count in range(2): #For para realizar el proceso 2 veces
+        forward(end.x - start.x)  #Avanza la distancia de valor x
+        right(90)                 #Gira 90 grados a la derecha
+        forward((end.x - start.x)/2) #Avanza la distancia de valor x pero se acorta para que sea el lado menor
+        right(90)                 #Gira 90 grados a la derecha
+
+    end_fill()       
 
 def triangle(start, end):
     """Draw triangle from start to end."""
     pass  # TODO
+    up()
+    goto(start.x, start.y)  
+    down()                 #De la linea 31 a 33 hace que la tortuga vaya a la posición que le indiquemos
+    begin_fill()           #Inicia el dibujo
 
+    for count in range(3): #Va a realizar el proceso 3 veces
+        forward(end.x - start.x) #Avanza la distancia de valor x
+        left(120)          #Gira a la izquierda 120 grados (Un triangulo equilatero todos sus angulos son de 60
+                           # grados)
+    end_fill()
 
 def tap(x, y):
     """Store starting point or draw shape."""
