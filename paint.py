@@ -38,7 +38,11 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    c = turtle.Turtle() #La variable para poder crearlo.
+    r = (end.x-start.x)/2 # Radio del circulo
+    begin_fill() #Empieza a hacer el circulo. 
+    c.circle(r) #Funcion para crear el circulo. 
+    end_fill #Termino el circulo.
 
 
 def rectangle(start, end):
@@ -96,6 +100,7 @@ listen()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
+onkey(lambda: color('purple'), 'P') #Añadimos un nuevo color.
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
